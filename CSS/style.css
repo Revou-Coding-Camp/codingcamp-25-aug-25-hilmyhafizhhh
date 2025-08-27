@@ -48,15 +48,18 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none;
-  color: #000;
+  /* color: #000; */
+  color: #2c64fc;
   font-size: 95%;
-  font-weight: 400;
+  font-weight: 600;
   padding: 4px 8px;
   border-radius: 5px;
 }
 
 nav ul li a:hover {
-  background-color: #f5f5f5;
+  background-color: #2c64fc;
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
 .hamburger {
@@ -124,7 +127,8 @@ nav ul li a:hover {
 
 .menubar ul li a {
   text-decoration: none;
-  color: #000;
+  /* color: #000; */
+  color: #2c64fc;
   font-size: 95%;
   font-weight: 400;
   padding: 5px 10px;
@@ -132,7 +136,9 @@ nav ul li a:hover {
 }
 
 .menubar ul li a:hover {
-  background-color: #f5f5f5;
+  background-color: #2c64fc;
+  color: #fff;
+  transition: all 0.3s ease;
 }
 @media screen and (max-width: 790px) {
   .hamburger {
@@ -144,3 +150,62 @@ nav ul li a:hover {
 }
 
 /* Navbar End*/
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  /* background: linear-gradient(to right, #2c64fc, #6a11cb); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 10%;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #000;
+}
+
+/* Modern button */
+.btn {
+  background-color: #fff;
+  color: #2c64fc;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: #2c64fc;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
