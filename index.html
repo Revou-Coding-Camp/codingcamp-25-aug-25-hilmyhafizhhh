@@ -8,23 +8,18 @@
   </head>
   <body>
     <div class="container">
+      <!-- Navbar -->
       <nav>
         <div class="logo">
-          <img src="images/Logo-Revou.png" alt="logo" />
+          <a href="#home">
+            <img src="images/Logo-Revou.png" alt="logo" />
+          </a>
         </div>
         <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="our-profile">Our Profile</a>
-          </li>
-          <li>
-            <a href="portofolio">Portofolio</a>
-          </li>
-          <li>
-            <a href="message-us">Message Us</a>
-          </li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#our-profile">Our Profile</a></li>
+          <li><a href="#portofolio">Portofolio</a></li>
+          <li><a href="#message-us">Message Us</a></li>
         </ul>
         <div class="hamburger">
           <span class="line"></span>
@@ -32,24 +27,19 @@
           <span class="line"></span>
         </div>
       </nav>
+
+      <!-- Mobile Menu -->
       <div class="menubar">
         <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="our-profile">Our Profile</a>
-          </li>
-          <li>
-            <a href="portofolio">Portofolio</a>
-          </li>
-          <li>
-            <a href="message-us">Message Us</a>
-          </li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#our-profile">Our Profile</a></li>
+          <li><a href="#portofolio">Portofolio</a></li>
+          <li><a href="#message-us">Message Us</a></li>
         </ul>
       </div>
 
-      <header class="hero">
+      <!-- Hero Section -->
+      <header class="hero" id="home">
         <div class="hero-content">
           <h1>Hi <span id="username"></span>, Welcome to My Website</h1>
           <p>
@@ -59,8 +49,53 @@
           <a href="#our-profile" class="btn">Learn More</a>
         </div>
       </header>
+
+      <!-- Our Profile Section -->
+      <section id="our-profile">
+        <h2>Our Profile</h2>
+        <p>
+          We are a team of passionate developers and designers committed to
+          delivering high-quality digital solutions. Our focus is on creating
+          websites that are not only visually appealing but also user-friendly
+          and scalable.
+        </p>
+      </section>
+
+      <!-- Portofolio Section -->
+      <section id="portofolio">
+        <h2>Portofolio</h2>
+        <p>
+          Take a look at some of our recent projects ranging from personal
+          websites, business landing pages, to full-scale e-commerce platforms.
+          Each project reflects our dedication to excellence and attention to
+          detail.
+        </p>
+      </section>
+
+      <!-- Message Us Section -->
+      <section id="message-us">
+        <h2>Message Us</h2>
+        <p>
+          Have a question or a project in mind? Feel free to reach out to us
+          through the contact form. We're here to help you turn your ideas into
+          reality.
+        </p>
+        <form>
+          <label for="name">Name</label><br />
+          <input type="text" id="name" name="name" /><br /><br />
+
+          <label for="email">Email</label><br />
+          <input type="email" id="email" name="email" /><br /><br />
+
+          <label for="message">Message</label><br />
+          <textarea id="message" name="message"></textarea><br /><br />
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
     </div>
 
+    <!-- Script -->
     <script src="js/script.js"></script>
   </body>
 </html>
