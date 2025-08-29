@@ -61,7 +61,43 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.6 }
+  { threshold: 0.3 }
 );
 
 sections.forEach((section) => observer.observe(section));
+
+// Handling form submission
+// Form validation & output
+const contactForm = document.getElementById("contactForm");
+const formOutput = document.getElementById("formOutput");
+
+contactForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  // Validasi sederhana
+  if (!name || !email || !message) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  if (!/\S+@\S+\.\S+/.test(email)) {
+    alert("Please enter a valid email.");
+    return;
+  }
+
+  // Tampilkan hasil
+  formOutput.style.display = "block";
+  formOutput.innerHTML = `
+    <h3>Message Summary</h3>
+    <p><strong>Name:</strong> ${name}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Message:</strong> ${message}</p>
+  `;
+
+  // Reset form
+  contactForm.reset();
+});
